@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*header*/
+header{
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/ayasofya.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+}
+nav a h1{
+    font-family: "Electrolize";
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    
+}
+
+nav h1:hover{
+    font-size: 34px;
+    transition: .3s;
+}
+
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    position: relative;
+}
+
+.nav-links ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.nav-links ul li a:hover::after{
+    width: 100%;
+    transition: .3s;
+}
+
+/* ilk açıklama */
+
+.text_box{
+    width: 90%;
+    position: absolute; /* tam ortalamak için */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text_box h1{
+    font-size: 50px;
+}
+
+.text_box p{
+    margin: 10px, 50px;
+    font-size: 15px;
+}
+
+.hero_btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 40px;   
+}
+
+.hero_btn:hover{
+    border: 1px solid red;
+    background-color: red;
+    transition: .3s;
+}
+
+nav .bi{
+    font-size: 25px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+nav .bi:hover{
+    font-size: 30px;
+}
+
+@media (max-width:768px) {
+    .text_box h1{
+        font-size: 25px;
+    }
+    
+    nav .bi{
+        display: block;
+    }
+    
+    nav div ul{
+        display: none;
+    }
+}
+
+
+/* kurs seçenkeleri */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.course h1{
+    font-size: 35px;
+}
+
+.course p{
+    color: #5c5c5c;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.row {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course_col{
+    background-color: rgb(245, 216, 178);
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+}
+
+.course_col h1{
+    margin:10px 0;
+}
+
+.course_col:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    transition: .3s;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* kampüsler */
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus .row{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campus h1{
+    margin: 10px 0;
+}
+
+.campus p{
+    margin: 10px 0;
+}
+.campus-col{
+    border-radius: 10px;
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.layer:hover{
+    background-color: rgba(0,0,0,0.3);
+    transition: .3s;
+}
+
+.layer h3{
+    opacity: 0;
+    font-weight: 500;
+    color: white;
+    text-decoration: 0 0 10px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: .7s;
+    
+}
+
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+    transition: .7s;
+}
+
+/* diğre yerleşkeler */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    margin: 10px 0 10px 10px;
+}
+
+/* yorumlar */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.testimonials-col{
+    display: flex;
+    flex-basis: 30%;
+    margin: 10px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.testimonials-col img{
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+.testimonials p{
+    margin: 20px;
+}
+.testimonials h1{
+    margin: 20px;
+}
+
+.testimonials-col h2{
+    margin-top: 15px;
+}
+
+.testimonials-col p{
+    padding: 0;
+}
+
+.testimonials-col .bi{
+    color: red;
+}
+
+/* ileişim alanı */
+
+.ua{
+    width: 80%;
+    margin: 100px auto;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/ayasofya.jpg);
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.ua a{
+    margin-top: 30px;
+}
+
+/* hakkımızda */
+
+footer{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h1{
+    margin: 25px 0;
+}
+
+footer .bi{
+    color: red;
+    cursor: pointer;
+    padding-left: 40px;
+    font-size: 30px;
+
+}
+
+footer .bi:hover{
+    font-size: 34px;
+}
